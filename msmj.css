@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-align: center;
+}
+
+h1 { font-size: 1.4em }
+h2 { font-size: 1.1em }
+h3 { font-size: 1.0em }
+h4 { font-size: 0.9em }
+
+img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 2%;
+  right: 2%;
+}
+
+.tip {
+  display: none;
+}
+
+#tip1 {
+  display: block;
+}
+
+.back {
+  /* 상아색 #EEE6C4*/
+  background: #c8c8c8;
+  width: 100%;
+  height: 100%;
+}
+
+#datainfo, #sbinfo {
+  display: none;
+  z-index: 999;
+  position: absolute;
+  background-color: white;
+  color: black;
+  left: 50%;
+  top: 2%;
+  width: 82%;
+  height: auto;
+  margin-left: -41%; /* width의 절반 */
+  border-radius: 10px;
+  border: 3px solid;
+}
+
+.blur {
+  width: 100%;
+  height: 100%;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+}
+
+.rtinfo {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  width: 100%;
+  margin-left: -50%; /* width의 절반 */
+}
+
+.stateInfoLeft, .stateInfoRight {
+  display: none;
+  z-index: 500;
+  position: absolute;
+  color: #c2c2c2;
+  top: 3%;
+  font-size: 12px;
+}
+
+.stateInfoLeft {
+  left: 13%;
+}
+
+.stateInfoRight {
+  right: 13%;
+}
+
+#sil1, #sir1 {
+  display: block;
+}
+
+.speechbubble {
+  position: absolute;
+  background-color: white;
+  color: black;
+  left: 50%;
+  top: 2%;
+  width: 80%;
+  height: 33%;
+  margin-left: -40%; /* width의 절반 */
+  border-radius: 25px;
+}
+
+.speechbubble::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  bottom: -25px;
+  right: 20%;
+  border-style: solid;
+  border-width: 15px;
+  border-color: white transparent transparent white;
+  transform: rotate(10deg);
+}
+
+.sbtable {
+  display: table;
+	table-layout: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.sbcell {
+  display: table-cell;
+	vertical-align: middle;
+}
+
+.graytxt {
+  color: gray;
+  font-size: 13px;
+}
+
+#sb2, #sb3, #sb4 {
+  display: none;
+}
+
+/* 가로모드 금지 */
+#landscape {
+  position: fixed;
+  background-color: black;
+  color: white;
+  display: none;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+}
+
+#nols {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+/* 애니메이션 */
+
+.plztap {
+  animation: opa06 1.5s ease-out infinite;
+}
+
+@keyframes opa06 {
+  50% {
+    opacity: 0.6;
+  }
+}
+
+
+.show {
+		-webkit-animation: show 0.5s;
+		-webkit-animation-iteration-count: 1;
+		-moz-animation: show 0.5s;
+		-moz-animation-iteration-count: 1;
+		-ms-animation: show 0.5s;
+		-ms-animation-iteration-count: 1;
+		-o-animation: show 0.5s;
+		-o-animation-iteration-count: 1;
+		animation: show 0.5s;
+		animation-iteration-count: 1;
+}
+
+.hide {
+		-webkit-animation: hide 0.5s;
+		-webkit-animation-iteration-count: 1;
+		-moz-animation: hide 0.5s;
+		-moz-animation-iteration-count: 1;
+		-ms-animation: hide 0.5s;
+		-ms-animation-iteration-count: 1;
+		-o-animation: hide 0.5s;
+		-o-animation-iteration-count: 1;
+		animation: hide 0.5s;
+		animation-iteration-count: 1;
+}
+
+.tshow {
+		-webkit-animation: show 3.0s;
+		-webkit-animation-iteration-count: 1;
+		-moz-animation: show 3.0s;
+		-moz-animation-iteration-count: 1;
+		-ms-animation: show 3.0s;
+		-ms-animation-iteration-count: 1;
+		-o-animation: show 3.0s;
+		-o-animation-iteration-count: 1;
+		animation: show 3.0s;
+		animation-iteration-count: 1;
+}
+
+.thide {
+		-webkit-animation: hide 3.0s;
+		-webkit-animation-iteration-count: 1;
+		-moz-animation: hide 3.0s;
+		-moz-animation-iteration-count: 1;
+		-ms-animation: hide 3.0s;
+		-ms-animation-iteration-count: 1;
+		-o-animation: hide 3.0s;
+		-o-animation-iteration-count: 1;
+		animation: hide 3.0s;
+		animation-iteration-count: 1;
+}
+
+@-webkit-keyframes show {
+		from {
+				opacity: 0;
+		}
+		to {
+				opacity: 1;
+		}
+}
+
+@-moz-keyframes hide {
+		from {
+				opacity: 0;
+		}
+		to {
+				opacity: 1;
+		}
+}
+
+@-ms-keyframes hide {
+		from {
+				opacity: 0;
+		}
+		to {
+				opacity: 1;
+		}
+}
+
+@-o-keyframes hide {
+		from {
+				opacity: 0;
+		}
+		to {
+				opacity: 1;
+		}
+}
+
+@keyframes hide {
+		from {
+				opacity: 0;
+		}
+		to {
+				opacity: 1;
+		}
+}
+
+@-webkit-keyframes hide {
+		to {
+				opacity: 0;
+		}
+}
+
+@-moz-keyframes hide {
+		to {
+				opacity: 0;
+		}
+}
+
+@-ms-keyframes hide {
+		to {
+				opacity: 0;
+		}
+}
+
+@-o-keyframes hide {
+		to {
+				opacity: 0;
+		}
+}
+
+@keyframes hide {
+		to {
+				opacity: 0;
+		}
+}
+
+/* 미디어 쿼리 */
+
+@media (orientation:landscape){
+  #landscape {
+    display: block;
+  }
+  .back {
+    display: none;
+  }
+}

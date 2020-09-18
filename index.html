@@ -1,0 +1,311 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MISEMOJI</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0,
+  minimum-scale:1.0, user-scalable=no, shrink-to-fit=no, target-densitydpi=device-dpi">
+  <!-- script src -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+  <script src="./msmj.js"></script>
+  <!-- style -->
+  <link rel="stylesheet" type="text/css" href="./msmj.css">
+  <link rel="stylesheet" type="text/css" href="./moji.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+</head>
+
+<body>
+
+<div id = "landscape">
+  <h1 id = "nols">가로모드는 지원하지 않습니다.</h1>
+</div>
+
+<div class = "back">
+
+  <div class = "blur">
+  <div class = "rtinfo">
+    <h4><span id = "station">진주시 상대동</span></h4>
+    <h4><span id = "time">(load 실패)</span></h4>
+    <h1 style="font-size: 1.3em;">미세먼지 <span id = "concentration10">(load 실패)</span> <span id = "condition10">(load 실패)</span></h2>
+    <h1 style="font-size: 1.3em;">초미세먼지 <span id = "concentration25">(load 실패)</span> <span id = "condition25">(load 실패)</span></h2>
+    <h5 class = "graytxt">제공 : 한국환경공단(airkorea)</h5>
+  </div>
+
+  <div class="moji face">
+    <div class="top-left face"></div>
+    <div class="top-right face"></div>
+    <div class="bottom-left face"></div>
+    <div class="bottom-right face"></div>
+    <div class="eyebrow-left"></div>
+    <div class="eyebrow-right"></div>
+    <!-- eye 시작 -->
+    <div class="eye-left"><div class="pupil"></div></div>
+    <div class="eye-right"><div class="pupil"></div></div>
+    <div class="happy-eye-left"></div>
+    <div class="happy-eye-right"></div>
+    <div class="X-eye-left1"></div>
+    <div class="X-eye-left2"></div>
+    <div class="X-eye-right1"></div>
+    <div class="X-eye-right2"></div>
+    <!-- eye 끝 -->
+    <div class="nose"></div>
+    <div class="mouth1"></div>
+    <div class="mouth2"></div>
+  </div>
+  <div class = "speechbubble" id = "speechbubble">
+  <div class = "sbtable">
+  <div class = "sbcell">
+
+    <div id = "sb1" class = "sb">
+      <h2>지금 밖은<h2>
+      <h1>담배 <span style = "color: #d52e30;" id = "tbcc">(load 실패)</span>!</h1>
+      <h1 style="font-size: 1.2em;">( = 수명 <span style = "color: #d52e30;" id = "lftm">(load 실패)</span> 단축 )</h1><br>
+      <h4>미세먼지는 WHO 지정 <span style="color: #d52e30;">1군 발암물질</span>로</h4>
+      <h3><span style="color: #d52e30;" onclick="sbinfo(1)" class = "plztap">각종 질환을</span> 유발합니다.</h3>
+      <!--
+      <br>
+      <h2>마스크 안하고 1시간 돌아다니면</h2>
+      <h1>수명 <span style = "color: #d52e30;" id = "lftm">(load 실패)</span> 단축!</h1>
+      -->
+    </div>
+
+    <div id = "sb2" class = "sb">
+      <h2><span id = "str1"></span><h2>
+      <h1><span id = mask onclick="sbinfo(2)" class = "plztap"></span><span id = "str3"></span></h1>
+      <h2><span id = "str2"></span><h2>
+    </div>
+
+    <div id = "sb3" class = "sb">
+      <h2 onclick="sbinfo(3)" class = "plztap"><span style="color: #FF7F00;">비타민C</span>가 풍부한 과일/채소와</h2>
+      <h1>물 <span style = "color: #2899d4;" id = water></span>이상 섭취!</h1>
+      <h2>(330ml컵으로 <span style = "color: #2899d4;" id = "cup"></span>)<h2>
+    </div>
+
+    <div id = "sb4" class = "sb">
+      <div id = "tip1" class = "tip">
+        <h2>미세먼지 마스크의 정전기 필터는</h2>
+        <h2>한번 사용하면 기능이 손상됩니다.</h2>
+        <h2>세탁 및 재사용은 금물!</h2>
+      </div>
+      <div id = "tip2" class = "tip">
+        <h2>공기청정기를 사용해도</h2>
+        <h2>밀폐된 실내에는 이산화탄소가</h2>
+        <h2>축적되므로 1일 3회 자연 환기!</h2>
+        <h2>(나쁨, 매우 나쁨 제외)</h2>
+      </div>
+      <div id = "tip3" class = "tip">
+        <h2>자연 환기는</h2>
+        <h2>새벽, 이른아침, 늦은밤을 피해</h2>
+        <h2>도로변 방향이 아닌 창문으로 하세요</h2>
+      </div>
+      <div id = "tip4" class = "tip">
+        <h2>미세먼지가 심한날은</h2>
+        <h2>물걸레로 창틀과</h2>
+        <h2>바닥의 먼지를 닦는 청소를 하세요</h2>
+      </div>
+      <div id = "tip5" class = "tip">
+        <h2>미세먼지가 심한날은</h2>
+        <h2>렌즈대신 안경을 착용하세요</h2>
+      </div>
+      <div id = "tip6" class = "tip">
+        <h2>마스크는 의약외품을 착용하고</h2>
+        <h2>(KF80, KF94, KF99)</h2>
+        <h2>입이 아닌 코로 숨을 쉬세요</h2>
+      </div>
+      <div id = "tip7" class = "tip">
+        <h2>공기청정기는</h2>
+        <h2>미세먼지 차단 헤파필터 확인!</h2>
+      </div>
+      <div id = "tip8" class = "tip">
+        <h2>만성 호흡기 환자들은</h2>
+        <h2>독감 폐렴 백신을 꼭 접종하세요</h2>
+      </div>
+      <div id = "tip9" class = "tip">
+        <h2>만성 호흡기 환자들은</h2>
+        <h2>미세먼지 주의보 해체 이틀 후 부터</h2>
+        <h2>외출이나 실외활동을 추천드려요</h2>
+      </div>
+      <div id = "tip10" class = "tip">
+        <h2>침구류는</h2>
+        <h2>덮개를 씌워 관리하세요</h2>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <img src = "./info.png" onclick="datainfo()">
+  </div>
+
+  <h5 class = "stateInfoLeft" id = "sil1"></h5>
+  <h5 class = "stateInfoRight" id = "sir1">마스크 정보 →</h5>
+
+  <h5 class = "stateInfoLeft" id = "sil2">← 무서운 미세먼지</h5>
+  <h5 class = "stateInfoRight" id = "sir2">섭취 식품 정보 →</h5>
+
+  <h5 class = "stateInfoLeft" id = "sil3">← 마스크 정보</h5>
+  <h5 class = "stateInfoRight" id = "sir3">미세먼지 팁 →</h5>
+
+  <h5 class = "stateInfoLeft" id = "sil4">← 섭취 식품 정보</h5>
+  <h5 class = "stateInfoRight" id = "sir4"></h5>
+
+  <h5 class = "stateInfoLeft" id = "sil5">← 미세먼지 팁</h5>
+  <h5 class = "stateInfoRight" id = "sir5"></h5>
+
+  <div id = "datainfo">
+    <br><h1>출처 및 정보</h1><br>
+    <h3>API</h3>
+    <h4>한국환경공단 국가대기 오염정보 OpenAPI</h4><br>
+    <h3>담배</h3>
+    <h4>WHO Global Ambient Air Quality Database</h4><br>
+    <h3>수명</h3>
+    <h4>London : British Medical Association</h4><br>
+    <h3>물</h3>
+    <h4>가톨릭대 의정부성모병원 이영복 피부과 교수</h4>
+    <h4>식품의약 전문기자 박태균</h4><br>
+    <h4>세계보건기구(WHO) 8단계 분류 사용</h4><br>
+    <h5 style = "color: gray;">Made by TEAM MISE (GNU 2019 SWP)</h5><br>
+  </div>
+
+  <div id = "sbinfo">
+    <span id = "sistr1"></span>
+    <span id = "sistr2"></span>
+    <span id = "sistr3"></span>
+    <span id = "sistr4"></span>
+    <h5 id = "sisource" style = "color: gray;"></h5><br>
+  </div>
+
+</div>
+
+<script>
+var mtime; // Measuring time(측정 시간)
+var pm10;
+var pm25;
+
+  function getRealTimeInfo(){
+    $.ajax({
+      url: 'get_rtm_info.php',
+      type: 'GET',
+      async : false, // for AJAX data -> global js var
+      //dataType: 'JSON',
+      success: function(result){
+        var realTime = JSON.parse(result); // text to object
+        mtime = realTime.list[0].dataTime;
+        pm10 = realTime.list[0].pm10Value;
+        pm25 = realTime.list[0].pm25Value;
+        setRealTimeInfo();
+      }
+    });
+  }
+
+  function testModule(){
+    var testType = 1; // 0 : API 미사용
+    if(testType == 0) {
+      mtime = "TEST MODE";
+      pm10 = 200;
+      pm25 = 100;
+      setRealTimeInfo();
+    }
+    else getRealTimeInfo();
+  }
+  testModule();
+
+  var spstate = 1; // n번째 말풍선
+  // var tipstate = 1; // tipstate
+  var el = document.getElementById('speechbubble');
+  var hmmr = new Hammer(el);
+  hmmr.on("swipeleft", function(e){
+    if(swipeGuard == 0){
+    switch(spstate){
+      case(1):
+        x = 1;
+        y = 2;
+        translate_hide();
+        spstate = 2;
+        break;
+      case(2):
+        x = 2;
+        y = 3;
+        translate_hide();
+        spstate = 3;
+        break;
+      case(3):
+        x = 3;
+        y = 4;
+        translate_hide();
+        spstate = 4;
+        break;
+      }}
+  });
+  hmmr.on("swiperight", function(e){
+    if(swipeGuard == 0){
+    switch(spstate){
+      case(2):
+        x = 2;
+        y = 1;
+        translate_hide();
+        spstate = 1;
+        break;
+      case(3):
+        x = 3;
+        y = 2;
+        translate_hide();
+        spstate = 2;
+        break;
+      case(4):
+        x = 4;
+        y = 3;
+        translate_hide();
+        spstate = 3;
+        break;
+      }}
+  });
+  /*
+  hmmr.on("tap", function(e){
+    switch(tipstate){
+      case(1):
+        $("#tip1").css('display', 'none');
+        $("#tip2").css('display', 'block');
+        tipstate = 2;
+        break;
+      case(2):
+        $("#tip2").css('display', 'none');
+        $("#tip3").css('display', 'block');
+        tipstate = 3;
+        break;
+      case(3):
+        $("#tip3").css('display', 'none');
+        $("#tip4").css('display', 'block');
+        tipstate = 4;
+        break;
+      case(4):
+        $("#tip4").css('display', 'none');
+        $("#tip1").css('display', 'block');
+        tipstate = 1;
+        break;
+      }
+  });
+  */
+
+  var di = document.getElementById('datainfo');
+  var dihmmr = new Hammer(di);
+  dihmmr.on("tap", function(){
+    blurOff();
+    $("#datainfo").attr("class", "hide");
+    $("#datainfo").on("webkitAnimationEnd", datainfoNone);
+    $("#datainfo").on("mozAnimationEnd", datainfoNone);
+    $("#datainfo").on("animationend", datainfoNone);
+  });
+
+  var si = document.getElementById('sbinfo');
+  var sihmmr = new Hammer(si);
+  sihmmr.on("tap", function(){
+    blurOff();
+    $("#sbinfo").attr("class", "hide");
+    $("#sbinfo").on("webkitAnimationEnd", sbinfoNone);
+    $("#sbinfo").on("mozAnimationEnd", sbinfoNone);
+    $("#sbinfo").on("animationend", sbinfoNone);
+  });
+</script>
+
+</body>
+</html>

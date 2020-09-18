@@ -1,0 +1,189 @@
+/* 마스코트 캐릭터 스타일시트 */
+
+.face {
+  background: #F4F4F4;
+}
+
+.moji {
+  position: absolute;
+  width: 184px;
+  height: 75px;
+  top: 55%;
+  left: 50%;
+  border-radius: 80px;
+  margin-left: -92px; /* width의 절반 */
+  margin-top: -37.5px; /* height의 절반 */
+  animation: float 2s ease-out infinite;
+}
+
+.top-right {
+  width: 75px;
+  height: 75px;
+  top: -60%;
+  right: 15%;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.top-left {
+  width: 75px;
+  height: 75px;
+  top: -60%;
+  left: 15%;
+  border-radius: 200px;
+  position: absolute;
+}
+
+.bottom-right {
+  width: 75px;
+  height: 75px;
+  bottom: -60%;
+  right: 15%;
+  border-radius: 100px;
+  position: absolute;
+}
+
+.bottom-left {
+  width: 75px;
+  height: 75px;
+  bottom: -60%;
+  left: 15%;
+  border-radius: 100px;
+  position: absolute;
+}
+
+.eyebrow-left, .eyebrow-right {
+  position: absolute;
+  background: black;
+  width: 27px;
+  height: 3.5px;
+  border-radius: 33%;
+  top: 18%;
+  z-index: 4;
+}
+
+.eyebrow-left {
+  left: 27%;
+  transform: rotate(0deg); /*-20*/
+}
+
+.eyebrow-right {
+  right: 27%;
+  transform: rotate(0deg); /*20*/
+}
+
+.eye-left, .eye-right {
+  display: none;
+  position: absolute;
+  background: black;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  top: 35%;
+  z-index: 4;
+}
+
+.eye-left {
+  left: 30%;
+}
+
+.eye-right {
+  right: 30%;
+}
+
+.pupil {
+  position: absolute;
+  border-radius: 50%;
+  height: 6px;
+  width: 6px;
+  right: 13%;
+  background: #ffffff;
+}
+
+.happy-eye-left, .happy-eye-right {
+  display: none;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 35%;
+  z-index: 4;
+  border: 3px solid;
+  border-radius: 50%;
+  border-color: black transparent transparent black;
+  transform: rotate(45deg);
+}
+
+.happy-eye-left {
+  left: 30%;
+}
+
+.happy-eye-right {
+  right: 30%;
+}
+
+.x-eye-left1, .x-eye-left2, .x-eye-right1, .x-eye-right2 {
+  display: none;
+  position: absolute;
+  background: black;
+  width: 25px;
+  height: 3px;
+  border-radius: 33%;
+  top: 44%;
+  z-index: 4;
+}
+
+.x-eye-left1 {
+  left: 30%;
+  transform: rotate(45deg);
+}
+
+.x-eye-left2 {
+  left: 30%;
+  transform: rotate(-45deg);
+}
+
+.x-eye-right1 {
+  right: 30%;
+  transform: rotate(45deg);
+}
+
+.x-eye-right2 {
+  right: 30%;
+  transform: rotate(-45deg);
+}
+
+.nose {
+  position: absolute;
+  top: 68%;
+  right: 49%;
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 50%;
+  box-shadow: 2px 0 #000, 1px 1px #000;
+}
+
+.mouth1, .mouth2 {
+  position: absolute;
+  top: 65%;
+  width: 10px;
+  height: 10px;
+  border: 3px solid;
+  border-radius: 50%;
+  border-color: black transparent transparent black;
+  transform: rotate(225deg);
+}
+
+.mouth1 {
+  right: 50%;
+}
+
+.mouth2 {
+  left: 50%;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, -10px);
+  }
+}
