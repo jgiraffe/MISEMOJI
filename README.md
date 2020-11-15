@@ -4,7 +4,7 @@
 
 ## Stack
 ```
-JS / PHP / jQuery / Hammer.js / 한국환경공단_대기오염정보 OPEN API
+JS / PHP / jQuery / Hammer.js / HTML / CSS / 한국환경공단_대기오염정보 OPEN API
 ```
 
 ## 개발 내용
