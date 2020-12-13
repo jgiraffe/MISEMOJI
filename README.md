@@ -1,13 +1,13 @@
 # misemoji
 ## https://jgiraffe.github.io/misemoji
-테스트 모드를 활용하여 시연용 정적 페이지로 구현된 홈페이지입니다.
+위 링크는 테스트 모드를 활용하여 시연용 정적 페이지로 구현된 홈페이지입니다.
 
 ## 작품소개
 기본적인 현재의 미세먼지 농도는 제공하되 ”오늘 미세먼지 농도“에 대한 경각심을 일깨워 주고, 적절한 대처법을 제공해주는 웹 앱입니다.
 
 ## Stack
 ```
-JS / PHP / jQuery / Hammer.js / HTML / CSS / 한국환경공단_대기오염정보 OPEN API
+HTML, CSS, JS, PHP, jQuery, Hammer.js, 한국환경공단_대기오염정보 OPEN API
 ```
 
 ## 개발 내용
