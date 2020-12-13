@@ -62,11 +62,6 @@
       <h1 style="font-size: 1.2em;">( = 수명 <span style = "color: #d52e30;" id = "lftm">(load 실패)</span> 단축 )</h1><br>
       <h4>미세먼지는 WHO 지정 <span style="color: #d52e30;">1군 발암물질</span>로</h4>
       <h3><span style="color: #d52e30;" onclick="sbinfo(1)" class = "plztap">각종 질환을</span> 유발합니다.</h3>
-      <!--
-      <br>
-      <h2>마스크 안하고 1시간 돌아다니면</h2>
-      <h1>수명 <span style = "color: #d52e30;" id = "lftm">(load 실패)</span> 단축!</h1>
-      -->
     </div>
 
     <div id = "sb2" class = "sb">
@@ -197,8 +192,9 @@ var pm25;
     });
   }
 
+  // 키 만료로 API 미사용하여 정적 페이지 구현
   function testModule(){
-    var testType = 1; // 0 : API 미사용
+    var testType = 0; // 0 : API 미사용
     if(testType == 0) {
       mtime = "TEST MODE";
       pm10 = 200;
@@ -259,32 +255,6 @@ var pm25;
         break;
       }}
   });
-  /*
-  hmmr.on("tap", function(e){
-    switch(tipstate){
-      case(1):
-        $("#tip1").css('display', 'none');
-        $("#tip2").css('display', 'block');
-        tipstate = 2;
-        break;
-      case(2):
-        $("#tip2").css('display', 'none');
-        $("#tip3").css('display', 'block');
-        tipstate = 3;
-        break;
-      case(3):
-        $("#tip3").css('display', 'none');
-        $("#tip4").css('display', 'block');
-        tipstate = 4;
-        break;
-      case(4):
-        $("#tip4").css('display', 'none');
-        $("#tip1").css('display', 'block');
-        tipstate = 1;
-        break;
-      }
-  });
-  */
 
   var di = document.getElementById('datainfo');
   var dihmmr = new Hammer(di);

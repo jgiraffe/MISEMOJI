@@ -5,7 +5,7 @@ function air_korea_realtime(){
   // 서비스 : ArpltnInforInqireSvc
   // 오퍼레이션 : getMsrstnAcctoRltmMesureDnsty
   // 측정소별 실시간 측정정보 조회
-  $key = '4T87d6nVbptKURbJ4cn3KOf0tMzdYmAomnawWvrauRg4gXefXV9YiUcRFsuDtxN5f3bL6AWCFIAmRsCucfVHVw%3D%3D';
+  $key = ''; // 만료로 삭제
   $station = '상대동'; // 위치정보 사용 제한으로 get_station();는 구현하지 않음
   $url = 'http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/';
   $operation = 'getMsrstnAcctoRltmMesureDnsty';
