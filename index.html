@@ -180,7 +180,7 @@ var pm25;
     $.ajax({
       url: 'get_rtm_info.php',
       type: 'GET',
-      async : false, // for AJAX data -> global js var
+      async : false,
       //dataType: 'JSON',
       success: function(result){
         var realTime = JSON.parse(result); // text to object
